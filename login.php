@@ -1,3 +1,29 @@
+<?php
+session_start();
+include 'database.php';
+include 'user.php';
+
+// Kalau sudah login, arahkan ke dashboard
+if (isset($_SESSION['user_id'])) {
+    header("Location: dashboard.php");
+    exit();
+}
+
+// Proses login
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $user = new User($db);
+    if ($user->login($username, $password)) {
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        $error = "Username atau password salah!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -19,7 +45,7 @@
 
     <main class="content">
         <div class="left-image">
-            <img src="../img/calendar.png" alt="Calendar">
+            <img src="img/calendar.png" alt="Calendar">
         </div>
 
         <div class="login-box">

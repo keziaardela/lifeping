@@ -28,15 +28,20 @@ nav a {
 .content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 30px 80px;
+    justify-content: flex-start; /* semua isi ke kiri */
+    padding: 30px 50px; /* kiri-kanan lebih sempit */
     height: 80vh;
-    gap: 100px;
+    gap: 20px; /* kecilkan jarak antara gambar dan login box */
 }
 
 /* Gambar Kiri */
+.left-image {
+    flex-shrink: 0;
+    margin-left: -80px; /* geser gambar ke kiri */
+}
+
 .left-image img {
-    width: 500px;
+    width: 900px;
 }
 
 /* Login Box */
@@ -45,8 +50,9 @@ nav a {
     padding: 30px 35px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    width: 320px;
+    width: 340px;
     text-align: center;
+    margin-left: -50px; /* geser login box lebih kiri */
 }
 
 .login-box h2 {
