@@ -16,7 +16,7 @@
     <a href="#" class="active">LOG IN</a>
 </nav>
 
-<!-- Content -->
+<!-- Isi konten -->
 <section class="container">
     <div class="left">
         <h1>Life<br>Ping</h1>

@@ -1,17 +1,14 @@
-/* Style dasar */
+/* Body dengan gambar background */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     color: #1a1a1a;
     background-color: #d6b996;
-    background-image:
-        radial-gradient(circle at 20% -30%, #d6b996 300px, transparent 300px),
-        radial-gradient(circle at 100% 0%, #c76b98 450px, transparent 450px),
-        radial-gradient(circle at 0% 100%, #c76b98 350px, transparent 350px);
-    background-repeat: no-repeat;
-    background-position: top left, top right, bottom left;
+    background-image: url("../img/background.png");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Navbar */
@@ -35,7 +32,7 @@ nav a.active {
     font-weight: bold;
 }
 
-/* Layout kiri-kanan */
+/* Layout utama */
 .container {
     display: flex;
     justify-content: space-between;
