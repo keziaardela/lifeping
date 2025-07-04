@@ -8,26 +8,22 @@ if (isset($_SESSION['user_id'])) {
     exit();
 }
 
-$error = ''; // Ensure error is initialized to avoid undefined errors
+$error = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $password_confirm = $_POST['password_confirm'];
 
-    // Check if the passwords match
     if ($password == $password_confirm) {
-        // Initialize the User class and attempt registration
         $user = new User($db);
         if ($user->register($username, $password)) {
-            header("Location: login.php"); // Redirect on successful registration
+            header("Location: login.php");
             exit();
         } else {
-            // Display error if username is already registered
             $error = "Username sudah terdaftar!";
         }
     } else {
-        // Error message if passwords don't match
         $error = "Password tidak cocok!";
     }
 }
@@ -39,23 +35,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar — LifePing</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signup-style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header class="navbar">
-        <div class="logo">
-            LifePing
-            <!-- Tanda panah di samping logo untuk kembali ke Dashboard -->
-            <a href="dashboard.php" class="back-arrow">
-                <span>&larr;</span>
-            </a>
-        </div>
+        <div class="logo">LifePing</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
 
-    <main class="login-container">
-        <div class="login-box">
+    <!-- Main content -->
+    <main class="content">
+        <div class="left-image">
+            <img src="img/calendar.png" alt="Calendar"> <!-- ganti sesuai file -->
+        </div>
+
+        <!-- Signup box -->
+        <div class="signup-box">
             <h2>Daftar</h2>
-            <!-- Display error if exists -->
             <?php if (!empty($error)) { echo "<p class='error'>$error</p>"; } ?>
             <form method="POST" action="register.php">
                 <div class="input-group">
@@ -76,11 +77,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button type="submit" class="btn">Daftar</button>
                 <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
             </form>
-
-            <!-- Tambahkan link untuk kembali ke Dashboard -->
-            <a href="dashboard.php" class="back-arrow">
-                <span>&larr; Kembali ke Dashboard</span>
-            </a>
         </div>
     </main>
 </body>

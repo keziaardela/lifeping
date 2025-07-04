@@ -14,26 +14,45 @@ class User {
         $this->conn = $db;
     }
 
-    // Fungsi untuk login
+    // Fungsi login
     public function login($username, $password) {
-        // Query untuk mencari user berdasarkan username
         $query = "SELECT id, username, password FROM " . $this->table_name . " WHERE username = :username LIMIT 1";
 
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':username', $username);
         $stmt->execute();
 
-        // Cek apakah ada data pengguna
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($row && password_verify($password, $row['password'])) {
-            // Jika password cocok, set session
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
             return true;
         }
 
-        // Jika username atau password salah
         return false;
+    }
+
+    // Fungsi register
+    public function register($username, $password) {
+        // Cek apakah username sudah ada
+        $queryCheck = "SELECT id FROM " . $this->table_name . " WHERE username = :username LIMIT 1";
+        $stmtCheck = $this->conn->prepare($queryCheck);
+        $stmtCheck->bindParam(':username', $username);
+        $stmtCheck->execute();
+
+        if ($stmtCheck->fetch(PDO::FETCH_ASSOC)) {
+            return false; // Username sudah ada
+        }
+
+        // Simpan user baru
+        $queryInsert = "INSERT INTO " . $this->table_name . " (username, password) VALUES (:username, :password)";
+        $stmtInsert = $this->conn->prepare($queryInsert);
+
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $stmtInsert->bindParam(':username', $username);
+        $stmtInsert->bindParam(':password', $hashedPassword);
+
+        return $stmtInsert->execute();
     }
 }
 ?>
