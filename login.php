@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     // Membuat objek User dan memanggil fungsi login
-    $user = new User($db);
+    $user = new user($db);
     if ($user->login($username, $password)) {
         // Jika login berhasil, arahkan ke dashboard
         header("Location: dashboard.php");
