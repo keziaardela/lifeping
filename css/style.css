@@ -1,0 +1,91 @@
+/* Reset Margin dan Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style untuk Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E6D4B8; /* Warna Latar Belakang */
+}
+
+/* Container Utama */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Judul */
+h1 {
+    font-size: 3rem;
+    color: #1A1A1A; /* Warna Teks */
+    margin-bottom: 1rem;
+}
+
+/* Paragraf */
+p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F1A7A1; /* Warna Navbar */
+    padding: 10px 20px;
+}
+
+/* Tautan Navbar */
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Tombol */
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.login {
+    background-color: #FFA500; /* Warna Tombol Login */
+    color: #FFF;
+}
+
+.daftar {
+    background-color: #28A745; /* Warna Tombol Daftar */
+    color: #FFF;
+}
+
+/* Kotak Notifikasi */
+.notification-box {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Ikon Notifikasi */
+.notification-icon {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #666;
+}
