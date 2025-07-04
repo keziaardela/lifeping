@@ -1,61 +1,56 @@
-/* Warna background dan pola */
+/* Body dan Layout Utama */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #d6b996;
-  background-image: 
-    radial-gradient(circle at 0% 0%, #d6b996 42%, transparent 42%),
-    radial-gradient(circle at 100% 0%, #c76b98 42%, transparent 42%),
-    radial-gradient(circle at 0% 100%, #c76b98 50%, transparent 50%);
-  color: #000;
-  overflow-x: hidden;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom left, #d4ba99 50%, #c86b99 50%);
+    color: #000;
 }
 
 /* Navbar */
 nav {
-  display: flex;
-  justify-content: flex-end;
-  padding: 30px 60px;
-  gap: 30px;
-  font-size: 13px;
-  font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 50px;
+    background-color: transparent;
+    gap: 30px;
 }
 
 nav a {
-  text-decoration: none;
-  color: #000;
-  transition: color 0.3s;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
 }
 
-nav a.active {
-  font-weight: bold;
-  color: #2f0b1f;
+nav a:hover {
+    color: #c86b99;
 }
 
-/* Konten kiri */
+nav .active {
+    font-weight: bold;
+    color: #c86b99;
+}
+
+/* Bagian Kiri (Teks) */
 .content {
-  padding: 80px 80px;
-  max-width: 50%;
+    max-width: 50%;
+    padding: 100px 60px;
 }
 
 .content h1 {
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 20px;
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
 .content p {
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 30px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 /* Tombol */
 .button-container {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .button-container a {
@@ -68,43 +63,60 @@ nav a.active {
 }
 
 .button-container .login {
-  background-color: #f8991c;
+    background-color: #ff9100;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 .button-container .register {
-  background-color: #71a665;
+    background-color: #71a665;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.button-container a:hover {
-  opacity: 0.85;
+.button-container .login:hover,
+.button-container .register:hover {
+    opacity: 0.8;
 }
 
-/* Gambar kanan */
+/* Bagian Kanan (Gambar/Reminder) */
 .right-image {
-  position: absolute;
-  top: 120px;
-  right: 80px;
-  width: 280px;
-  max-width: 100%;
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    width: 300px;
 }
 
 /* Responsif mobile */
 @media (max-width: 768px) {
-  .content {
-    padding: 40px 30px;
-    max-width: 100%;
-  }
+    .content {
+        max-width: 100%;
+        padding: 50px 30px;
+    }
 
-  .right-image {
-    position: static;
-    width: 80%;
-    margin: 0 auto;
-    display: block;
-    margin-top: 30px;
-  }
+    .right-image {
+        position: static;
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+        margin-top: 30px;
+    }
 
   nav {
     justify-content: center;
     padding: 20px;
   }
+}
+
+@font-face {
+    font-family: 'BrittanySignature';
+    src: url('../fonts/BrittanySignature.ttf') format('truetype');
 }
