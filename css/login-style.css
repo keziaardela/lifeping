@@ -2,41 +2,96 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
-    background-image: url("../img/bg-login.png"); /* background khusus login */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #f5e9dc;
 }
 
-.login-container {
-    width: 400px;
-    margin: 120px auto;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Content */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 80px;
+    height: 80vh;
+    gap: 100px;
+}
+
+/* Gambar Kiri */
+.left-image img {
+    width: 500px;
+}
+
+/* Login Box */
+.login-box {
     background: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 320px;
     text-align: center;
 }
 
-.login-container h1 {
+.login-box h2 {
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
+    color: #333;
 }
 
-.login-container input {
-    width: 90%;
-    padding: 10px;
+/* Form */
+.input-group {
     margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
 }
 
-.login-container button {
-    padding: 10px 30px;
+.btn {
+    width: 100%;
+    padding: 12px;
     background-color: #f8991c;
     border: none;
-    color: white;
     border-radius: 8px;
+    color: white;
+    font-weight: 600;
     cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
 }
