@@ -1,118 +1,119 @@
-/* Body dengan gambar background */
+/* Body dan Layout Utama */
 body {
     margin: 0;
-    padding: 0;
     font-family: 'Poppins', sans-serif;
-    color: #1a1a1a;
-    background-color: #d6b996;
-    background-image: url("../img/background.png");
-    background-size: 1500px 685px;
-    background-repeat: no-repeat;
-    background-position: top right;
-
+    background: linear-gradient(to bottom left, #d4ba99 50%, #c86b99 50%);
+    color: #000;
 }
 
 /* Navbar */
 nav {
     display: flex;
     justify-content: flex-end;
+    padding: 20px 50px;
+    background-color: transparent;
     gap: 30px;
-    padding: 30px 0px 30px 60px;
-    font-size: 13px;
-    font-weight: 500;
 }
 
 nav a {
     text-decoration: none;
-    color: #1a1a1a;
-    transition: color 0.3s;
+    color: #000;
+    font-weight: 500;
 }
 
-nav a.active {
-    color: #c76b98;
+nav a:hover {
+    color: #c86b99;
+}
+
+nav .active {
     font-weight: bold;
+    color: #c86b99;
 }
 
-/* Layout utama */
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 80px;
-    position: relative;
+/* Bagian Kiri (Teks) */
+.content {
+    max-width: 50%;
+    padding: 100px 60px;
 }
 
-.left {
-    max-width: 45%;
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
-.left h1 {
-    font-family: 'BrittanySignature', cursive;
-    font-size: 70px;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-
-.left p {
-    font-size: 14px;
-    line-height: 1.7;
+.content p {
+    font-size: 16px;
     margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 /* Tombol */
-.buttons {
+.buytton-container {
     display: flex;
     gap: 20px;
 }
 
-.btn {
-    text-decoration: none;
+.button-container a {
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #fff;
+  transition: opacity 0.3s;
+}
+
+.button-container .login {
+    background-color: #ff9100;
+    color: white;
+    border: none;
     padding: 10px 30px;
-    border-radius: 30px;
+    border-radius: 20px;
+    cursor: pointer;
     font-weight: 600;
-    color: #fff;
-    transition: opacity 0.3s;
 }
 
-.btn.login {
-    background-color: #f8991c;
-}
-
-.btn.register {
+.button-container .register {
     background-color: #71a665;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.btn:hover {
-    opacity: 0.85;
+.button-container .login:hover,
+.button-container .register:hover {
+    opacity: 0.8;
 }
 
-/* Gambar Reminder */
-.right img {
-    width: 380px;
+/* Bagian Kanan (Gambar/Reminder) */
+.right-image {
     position: absolute;
-    top: -90px;
-    right: 250px;
-
+    top: 150px;
+    right: 100px;
+    width: 300px;
 }
 
-/* Responsive */
+/* Responsif mobile */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 40px 30px;
-        text-align: center;
+    .content {
+        max-width: 100%;
+        padding: 50px 30px;
     }
 
-    .right img {
+    .right-image {
         position: static;
+        margin: 0 auto;
+        display: block;
         width: 80%;
         margin-top: 30px;
     }
 
-    nav {
-        justify-content: center;
-        padding: 20px;
-    }
+  nav {
+    justify-content: center;
+    padding: 20px;
+  }
 }
 
 @font-face {
