@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifePing</title>
+    <title>Life Ping</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,16 +17,14 @@
         </header>
 
         <div class="auth-buttons">
-            <a href="#" class="btn">Login</a>
-            <a href="#" class="btn">Daftar</a>
+            <span class="auth-text">Login</span>
+            <span class="auth-text">Daftar</span>
         </div>
 
-        <hr class="divider">
-
         <nav class="main-nav">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">CONTACT</a>
+            <span>HOME</span>
+            <span>ABOUT US</span>
+            <span>CONTACT</span>
         </nav>
 
         <hr class="divider">
