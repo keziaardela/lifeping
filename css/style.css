@@ -6,9 +6,10 @@ body {
     color: #1a1a1a;
     background-color: #d6b996;
     background-image: url("../img/background.png");
-    background-size: cover;
+    background-size: 800px auto;
     background-repeat: no-repeat;
     background-position: top right;
+
 }
 
 /* Navbar */
