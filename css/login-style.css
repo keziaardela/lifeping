@@ -1,64 +1,96 @@
+/* Import Brittany Signature */
+@font-face {
+    font-family: 'Brittany';
+    src: url('../fonts/BrittanySignature.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Import League Spartan Bold */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/LeagueSpartan-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Background */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #f5e9dc;
+    background-image: url("../img/bg-login.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    font-size: 20px;
+    align-items: flex-start;
+    padding: 10px 50px;
+    font-size: 40px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #d8bf9f;
 }
 
+/* Logo font Brittany */
+.logo {
+    font-family: 'Brittany', cursive;
+    font-size: 50px;
+    color: #d8bf9f;
+    align-self: flex-end;   /* supaya turun sendiri */
+    margin-bottom: 5px;     /* jarak dari bawah navbar */
+}
+
+/* Navbar links */
 nav a {
     margin-left: 30px;
     text-decoration: none;
     color: #1a1a1a;
     font-weight: 500;
     font-size: 14px;
+    font-family: 'League Spartan', sans-serif;
 }
 
 /* Content */
 .content {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* semua isi ke kiri */
-    padding: 30px 50px; /* kiri-kanan lebih sempit */
-    height: 80vh;
-    gap: 20px; /* kecilkan jarak antara gambar dan login box */
+    justify-content: flex-start;
+    padding: 25px 50px;
+    height: 65vh;
+    gap: 20px;
 }
 
-/* Gambar Kiri */
+/* Gambar kiri */
 .left-image {
     flex-shrink: 0;
-    margin-left: -80px; /* geser gambar ke kiri */
+    margin-left: -80px;
 }
 
 .left-image img {
     width: 900px;
 }
 
-/* Login Box */
+/* Login box */
 .login-box {
     background: rgba(255, 255, 255, 0.95);
     padding: 30px 35px;
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     width: 340px;
     text-align: center;
-    margin-left: -50px; /* geser login box lebih kiri */
+    margin-left: -150px;
 }
 
 .login-box h2 {
     margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
+    font-family: 'League Spartan', sans-serif;
+    color: #c76f93;
 }
 
 /* Form */
@@ -71,6 +103,7 @@ nav a {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
+    font-family: 'League Spartan', sans-serif;
 }
 
 .input-group input {
@@ -80,15 +113,23 @@ nav a {
     border: 1px solid #ccc;
 }
 
+.login-box p {
+    font-size: 12px; /* kecilkan ukuran huruf */
+    margin-top: 10px; /* tambahkan jarak atas */
+    color: #333; /* opsional: ubah warna jadi abu tua */
+}
+
+/* Button */
 .btn {
     width: 100%;
     padding: 12px;
-    background-color: #f8991c;
+    background-color: #c76f93;
     border: none;
     border-radius: 8px;
     color: white;
     font-weight: 600;
     cursor: pointer;
+    font-family: 'League Spartan', sans-serif;
 }
 
 .btn:hover {
