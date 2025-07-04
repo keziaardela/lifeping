@@ -112,3 +112,8 @@ nav a.active {
         padding: 20px;
     }
 }
+
+@font-face {
+    font-family: 'BrittanySignature';
+    src: url('../fonts/BrittanySignature.ttf') format('truetype');
+}
