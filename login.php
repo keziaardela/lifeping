@@ -1,32 +1,3 @@
-<?php
-session_start();
-include 'database.php';  // Pastikan koneksi database
-include 'user.php';      // Pastikan class User tersedia
-
-// Cek jika user sudah login, arahkan ke dashboard
-if (isset($_SESSION['user_id'])) {
-    header("Location: dashboard.php");
-    exit();
-}
-
-// Proses login jika form di-submit
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Membuat objek User dan memanggil fungsi login
-    $user = new User($db);
-    if ($user->login($username, $password)) {
-        // Jika login berhasil, arahkan ke dashboard
-        header("Location: dashboard.php");
-        exit();
-    } else {
-        // Jika login gagal, tampilkan pesan error
-        $error = "Username atau password salah!";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -48,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <main class="content">
         <div class="left-image">
-            <img src="../img/calendar.png" alt="Calendar">
+            <img src="img/calendar.png" alt="Calendar">
         </div>
 
         <div class="login-box">
