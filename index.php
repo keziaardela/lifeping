@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Ping</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>LifePing</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Life Ping</h1>
+            <p class="tagline">
+                Jangan biarkan hal penting terlewat.<br>
+                Bersama LifePing, setiap momen berharga akan selalu diingat.
+            </p>
+        </header>
 
-<!-- Navbar -->
-<nav>
-    <a href="#">HOME</a>
-    <a href="#">ABOUT US</a>
-    <a href="#">CONTACT</a>
-    <a href="#" class="active">LOG IN</a>
-</nav>
+        <div class="auth-buttons">
+            <a href="#" class="btn">Login</a>
+            <a href="#" class="btn">Daftar</a>
+        </div>
 
-<!-- Content -->
-<div class="content">
-    <h1>Life<br>Ping</h1>
-    <p>Jangan biarkan hal penting terlewat.<br>
-       Bersama LifePing, setiap momen berharga<br>
-       akan selalu diingat.</p>
+        <hr class="divider">
 
-    <div class="button-container">
-        <a href="login.php" class="login">Login</a>
-        <a href="register.php" class="register">Daftar</a>
+        <nav class="main-nav">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT</a>
+        </nav>
+
+        <hr class="divider">
+
+        <div class="features">
+            <p>Reminder</p>
+            <p>QOL</p>
+        </div>
     </div>
-</div>
-
-<!-- Gambar Reminder -->
-<img class="right-image" src="img/reminder-removebg-preview.png" alt="Reminder">
-
 </body>
 </html>
