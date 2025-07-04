@@ -6,7 +6,7 @@ body {
     color: #1a1a1a;
     background-color: #d6b996;
     background-image: url("../img/background.png");
-    background-size: 800px auto;
+    background-size: 1500px 685px;
     background-repeat: no-repeat;
     background-position: top right;
 
@@ -17,7 +17,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     gap: 30px;
-    padding: 30px 60px;
+    padding: 30px 0px 30px 60px;
     font-size: 13px;
     font-weight: 500;
 }
@@ -38,7 +38,7 @@ nav a.active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 80px;
+    padding: 0px 80px;
     position: relative;
 }
 
@@ -47,8 +47,9 @@ nav a.active {
 }
 
 .left h1 {
-    font-size: 50px;
-    font-weight: 700;
+    font-family: 'BrittanySignature', cursive;
+    font-size: 70px;
+    font-weight: normal;
     margin-bottom: 20px;
 }
 
@@ -87,10 +88,11 @@ nav a.active {
 
 /* Gambar Reminder */
 .right img {
-    width: 280px;
+    width: 380px;
     position: absolute;
-    top: 140px;
-    right: 100px;
+    top: -90px;
+    right: 250px;
+
 }
 
 /* Responsive */
@@ -111,4 +113,9 @@ nav a.active {
         justify-content: center;
         padding: 20px;
     }
+}
+
+@font-face {
+    font-family: 'BrittanySignature';
+    src: url('../fonts/BrittanySignature.ttf') format('truetype');
 }

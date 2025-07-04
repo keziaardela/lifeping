@@ -19,7 +19,7 @@
 <!-- Isi konten -->
 <section class="container">
     <div class="left">
-        <h1>Life<br>Ping</h1>
+        <h1>LifePing</h1>
         <p>Jangan biarkan hal penting terlewat.<br>
            Bersama LifePing, setiap momen berharga<br>
            akan selalu diingat.</p>
