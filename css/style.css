@@ -3,33 +3,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #d6b996;
     color: #1a1a1a;
-}
-
-/* Background curve */
-body::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: 0;
-    width: 70%;
-    height: 500px;
-    background-color: #c76b98;
-    border-bottom-left-radius: 300px;
-    z-index: -1;
-}
-
-body::after {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    height: 350px;
-    background-color: #c76b98;
-    border-top-right-radius: 300px;
-    z-index: -1;
+    background-color: #d6b996;
+    background-image:
+        radial-gradient(circle at 20% 0%, #d6b996 300px, transparent 300px),
+        radial-gradient(circle at 90% 0%, #c76b98 500px, transparent 500px),
+        radial-gradient(circle at 20% 120%, #c76b98 500px, transparent 500px);
+    background-repeat: no-repeat;
+    background-position: top left, top right, bottom left;
+    background-size: cover;
 }
 
 /* Navbar */
@@ -59,6 +41,7 @@ nav a.active {
     justify-content: space-between;
     align-items: center;
     padding: 50px 80px;
+    position: relative;
 }
 
 .left {
@@ -106,7 +89,10 @@ nav a.active {
 
 /* Gambar Reminder */
 .right img {
-    width: 270px;
+    width: 280px;
+    position: absolute;
+    top: 140px;
+    right: 100px;
 }
 
 /* Responsive */
@@ -118,6 +104,7 @@ nav a.active {
     }
 
     .right img {
+        position: static;
         width: 80%;
         margin-top: 30px;
     }
